@@ -1,4 +1,10 @@
-
+---
+title: "Blog's Tree View"
+description: "Blog's Tree View Detailed List."
+date: "2025-12-22"
+tags: ["sveltekit", "mdsvex", "shadcn", "starter", "blog"]
+author: "apip-tea"
+---
 ```Text
 userbot@localhost:/storage/self/primary/Page/Blog/Stelkit/sveltekit-shadcn-blog-starter-main$ tree -a
 .
