@@ -130,3 +130,7 @@
     overflow: auto;
   }
 }
+
+time {
+  white-space: nowrap;
+}
