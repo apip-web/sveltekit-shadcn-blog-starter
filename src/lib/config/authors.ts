@@ -7,7 +7,7 @@ export const authors = {
         github: "https://github.com/YusufCeng1z",
     },
     "apip-web": {
-        name: "Apip",
+        name: "Apip Web",
         bio: "Theme Modder & Blog Enthusiast",
         avatar: "https://github.com/apip-web.png",
         twitter: "https://twitter.com/apip-web",
