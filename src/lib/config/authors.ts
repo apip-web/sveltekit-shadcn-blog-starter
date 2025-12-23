@@ -8,7 +8,7 @@ export const authors = {
     },
     "apip-tea": {
         name: "Apip Tea",
-        bio: "Fullstack Developer & Blog Enthusiast",
+        bio: "Theme Modder & Blog Enthusiast",
         avatar: "https://github.com/apip-tea.png",
         twitter: "https://twitter.com/apip-tea",
         github: "https://github.com/apip-tea",
