@@ -9,9 +9,9 @@ export const authors = {
     "apip-tea": {
         name: "Apip Tea",
         bio: "Theme Modder & Blog Enthusiast",
-        avatar: "https://github.com/apip-tea.png",
+        avatar: "https://github.com/apip-web.png",
         twitter: "https://twitter.com/apip-tea",
-        github: "https://github.com/apip-tea",
+        github: "https://github.com/apip-web",
     },
 };
 
