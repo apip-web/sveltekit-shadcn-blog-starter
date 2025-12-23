@@ -6,11 +6,11 @@ export const authors = {
         twitter: "https://github.com/YusufCeng1z",
         github: "https://github.com/YusufCeng1z",
     },
-    "apip-tea": {
-        name: "Apip Tea",
+    "apip-web": {
+        name: "Apip",
         bio: "Theme Modder & Blog Enthusiast",
         avatar: "https://github.com/apip-web.png",
-        twitter: "https://twitter.com/apip-tea",
+        twitter: "https://twitter.com/apip-web",
         github: "https://github.com/apip-web",
     },
 };
