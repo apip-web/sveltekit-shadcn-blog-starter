@@ -205,12 +205,9 @@ li.expanded > ul {
   </ul>
 
 <script>
-document.querySelectorAll('li.folder').forEach(folder => {
-  folder.addEventListener('click', e => {
-    e.stopPropagation();
-    folder.classList.toggle('expanded');
-  });
-});
+  import TreeView from '$lib/components/app/TreeView.svelte';
 </script>
+
+<TreeView />
 
 36 directories, 109 files
