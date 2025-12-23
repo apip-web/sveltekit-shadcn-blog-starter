@@ -11,16 +11,16 @@
         >
             Built by{" "}
             <a
-                href={siteConfig.links.github}
+                href="https://github.com/apip-web/sveltekit-shadcn-blog-starter/"
                 target="_blank"
                 rel="noreferrer"
                 class="font-medium underline underline-offset-4"
             >
-                Yusuf Cengiz
+                Apip Web
             </a>
             . The source code is available on{" "}
             <a
-                href={siteConfig.links.github}
+                href="https://github.com/apip-web/sveltekit-shadcn-blog-starter/"
                 target="_blank"
                 rel="noreferrer"
                 class="font-medium underline underline-offset-4"
