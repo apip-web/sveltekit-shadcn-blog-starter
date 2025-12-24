@@ -211,27 +211,6 @@ li.expanded > ul {
 // App.svelte
 <script>
   import TreeView from '$lib/components/app/TreeView.svelte';
-
-  const tree = [
-    {
-      name: 'src',
-      open: true,
-      children: [
-        {
-          name: 'lib',
-          children: [
-            { name: 'utils.ts' }
-          ]
-        },
-        {
-          name: 'routes',
-          children: [
-            { name: '+page.svelte' }
-          ]
-        }
-      ]
-    }
-  ];
 </script>
 
-<TreeView {tree} />
+<TreeView />
