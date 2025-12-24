@@ -1,4 +1,5 @@
-// src/test.js
-export function sayHello() {
-  alert('Hello from JS!');
-}
+document.addEventListener('click', (e) => {
+  const folder = e.target.closest('li.folder');
+  if (!folder) return;
+  folder.classList.toggle('expanded');
+});
