@@ -210,7 +210,7 @@ li.expanded > ul {
 
 // App.svelte
 <script>
-  import { sayHello } from '.. /test.js';
+  import { sayHello } from '../test.js';
 </script>
 
 <button on:click={sayHello}>Click Me</button>
