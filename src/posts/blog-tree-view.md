@@ -206,10 +206,11 @@ li.expanded > ul {
 
 36 directories, 109 files
 
-<script>
-  import DebugAlert from '$lib/components/app/TreeView.svelte';
-</script>
-
 # Blog Tree View
 
-<DebugAlert />
+// App.svelte
+<script>
+  import { sayHello } from './test.js';
+</script>
+
+<button on:click={sayHello}>Click Me</button>
