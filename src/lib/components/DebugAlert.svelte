@@ -1,21 +1,29 @@
-<div id="debug-output" style="
-  margin-top:16px;
-  padding:8px;
-  background:#111;
-  color:#0f0;
-  font-family:monospace;
-  font-size:14px;
-">
-  Debug belum jalan
+<script>
+  import { onMount } from 'svelte';
+
+  let folderCount = 0;
+
+  onMount(() => {
+    const folders = document.querySelectorAll('li.folder');
+    folderCount = folders.length;
+
+    folders.forEach(folder => {
+      folder.addEventListener('click', (e) => {
+        e.stopPropagation();
+        folder.classList.toggle('expanded');
+      });
+    });
+  });
+</script>
+
+<div class="debug">
+  📂 Jumlah folder terdeteksi: {folderCount}
 </div>
 
-<script>
-  const output = document.getElementById('debug-output');
-
-  const folders = document.querySelectorAll('li.folder');
-
-  output.innerHTML = `
-    ✅ JS JALAN<br>
-    Folder ditemukan: <b>${folders.length}</b>
-  `;
-</script>
+<style>
+  .debug {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+  }
+</style>
