@@ -6,13 +6,3 @@ document.querySelectorAll('li.folder').forEach(folder => {
   });
 });
 </script>
-<script>
-    alert('TreeView CLICK OK');
-</script>
-<script>
-  alert("Alert from DebugAlert component!");
-</script>
-
-<div>
-  📢 Alert sudah dijalankan!
-</div>
