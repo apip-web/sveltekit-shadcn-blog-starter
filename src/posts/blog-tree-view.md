@@ -210,7 +210,7 @@ li.expanded > ul {
 
 // App.svelte
 <script>
-  import { sayHello } from '../test.js';
+  import TreeView from '$lib/components/app/TreeView.svelte';
 </script>
 
-<button on:click={sayHello}>Click Me</button>
+<TreeView />
