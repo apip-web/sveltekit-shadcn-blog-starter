@@ -210,7 +210,17 @@ li.expanded > ul {
 
 // App.svelte
 <script>
-  import TreeView from '$lib/components/app/TreeView.svelte';
+  import TreeViewHtml from '$lib/components/app/TreeViewHtml.svelte';
 </script>
 
-<TreeView />
+<TreeViewHtml>
+
+<ul>
+  <li class="folder">src
+    <ul>
+      <li class="file">app.html</li>
+    </ul>
+  </li>
+</ul>
+
+</TreeViewHtml>
