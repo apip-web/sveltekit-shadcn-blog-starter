@@ -19,18 +19,18 @@
   <li class="file">README.md</li>
 
   <li>
-    <div class="folder" on:click={() => toggle('src')}>📁 src</div>
+    <div class="folder" on:click={() => toggle('src')}>src</div>
     {#if open.src}
       <ul>
         <li class="file">app.d.ts</li>
         <li class="file">app.html</li>
 
         <li>
-          <div class="folder" on:click={() => toggle('lib')}>📁 lib</div>
+          <div class="folder" on:click={() => toggle('lib')}>lib</div>
           {#if open.lib}
             <ul>
               <li>
-                <div class="folder" on:click={() => toggle('assets')}>📁 assets</div>
+                <div class="folder" on:click={() => toggle('assets')}>assets</div>
                 {#if open.assets}
                   <ul>
                     <li class="file">favicon.svg</li>
@@ -39,11 +39,11 @@
               </li>
 
               <li>
-                <div class="folder" on:click={() => toggle('components')}>📁 components</div>
+                <div class="folder" on:click={() => toggle('components')}>components</div>
                 {#if open.components}
                   <ul>
                     <li>
-                      <div class="folder" on:click={() => toggle('app')}>📁 app</div>
+                      <div class="folder" on:click={() => toggle('app')}>app</div>
                       {#if open.app}
                         <ul>
                           <li class="file">DesktopNav.svelte</li>
@@ -57,10 +57,91 @@
                     </li>
 
                     <li>
-                      <div class="folder" on:click={() => toggle('blog')}>📁 blog</div>
+                      <div class="folder" on:click={() => toggle('blog')}>blog</div>
                       {#if open.blog}
                         <ul>
                           <li class="file">PostCard.svelte</li>
+                        </ul>
+                      {/if}
+                    </li>
+
+                    <li>
+                      <div class="folder" on:click={() => toggle('ui')}>ui</div>
+                      {#if open.ui}
+                        <ul>
+                          <li>
+                            <div class="folder" on:click={() => toggle('badge')}>badge</div>
+                            {#if open.badge}
+                              <ul>
+                                <li class="file">badge.svelte</li>
+                                <li class="file">index.ts</li>
+                              </ul>
+                            {/if}
+                          </li>
+                          <li>
+                            <div class="folder" on:click={() => toggle('button')}>button</div>
+                            {#if open.button}
+                              <ul>
+                                <li class="file">button.svelte</li>
+                                <li class="file">index.ts</li>
+                              </ul>
+                            {/if}
+                          </li>
+                          <li>
+                            <div class="folder" on:click={() => toggle('command')}>command</div>
+                            {#if open.command}
+                              <ul>
+                                <li class="file">command-dialog.svelte</li>
+                                <li class="file">command-empty.svelte</li>
+                                <li class="file">command-group.svelte</li>
+                                <li class="file">command-input.svelte</li>
+                                <li class="file">command-item.svelte</li>
+                                <li class="file">command-link-item.svelte</li>
+                                <li class="file">command-list.svelte</li>
+                                <li class="file">command-loading.svelte</li>
+                                <li class="file">command-separator.svelte</li>
+                                <li class="file">command-shortcut.svelte</li>
+                                <li class="file">command.svelte</li>
+                                <li class="file">index.ts</li>
+                              </ul>
+                            {/if}
+                          </li>
+                          <li>
+                            <div class="folder" on:click={() => toggle('dialog')}>dialog</div>
+                            {#if open.dialog}
+                              <ul>
+                                <li class="file">dialog-close.svelte</li>
+                                <li class="file">dialog-content.svelte</li>
+                                <li class="file">dialog-description.svelte</li>
+                                <li class="file">dialog-footer.svelte</li>
+                                <li class="file">dialog-header.svelte</li>
+                                <li class="file">dialog-overlay.svelte</li>
+                                <li class="file">dialog-portal.svelte</li>
+                                <li class="file">dialog.svelte</li>
+                                <li class="file">dialog-title.svelte</li>
+                                <li class="file">dialog-trigger.svelte</li>
+                                <li class="file">index.ts</li>
+                              </ul>
+                            {/if}
+                          </li>
+                          <li>
+                            <div class="folder" on:click={() => toggle('input')}>input</div>
+                            {#if open.input}
+                              <ul>
+                                <li class="file">index.ts</li>
+                                <li class="file">input.svelte</li>
+                              </ul>
+                            {/if}
+                          </li>
+                          <li>
+                            <div class="folder" on:click={() => toggle('textarea')}>textarea</div>
+                            {#if open.textarea}
+                              <ul>
+                                <li class="file">index.ts</li>
+                                <li class="file">textarea.svelte</li>
+                              </ul>
+                            {/if}
+                          </li>
                         </ul>
                       {/if}
                     </li>
@@ -69,7 +150,7 @@
               </li>
 
               <li>
-                <div class="folder" on:click={() => toggle('config')}>📁 config</div>
+                <div class="folder" on:click={() => toggle('config')}>config</div>
                 {#if open.config}
                   <ul>
                     <li class="file">authors.ts</li>
@@ -85,7 +166,7 @@
         </li>
 
         <li>
-          <div class="folder" on:click={() => toggle('posts')}>📁 posts</div>
+          <div class="folder" on:click={() => toggle('posts')}>posts</div>
           {#if open.posts}
             <ul>
               <li class="file">hello-world.md</li>
@@ -96,11 +177,11 @@
         </li>
 
         <li>
-          <div class="folder" on:click={() => toggle('routes')}>📁 routes</div>
+          <div class="folder" on:click={() => toggle('routes')}>routes</div>
           {#if open.routes}
             <ul>
               <li>
-                <div class="folder" on:click={() => toggle('about')}>📁 about</div>
+                <div class="folder" on:click={() => toggle('about')}>about</div>
                 {#if open.about}
                   <ul>
                     <li class="file">+page.svelte</li>
@@ -120,11 +201,11 @@
   </li>
 
   <li>
-    <div class="folder" on:click={() => toggle('static')}>📁 static</div>
+    <div class="folder" on:click={() => toggle('static')}>static</div>
     {#if open.static}
       <ul>
         <li>
-          <div class="folder" on:click={() => toggle('images')}>📁 images</div>
+          <div class="folder" on:click={() => toggle('images')}>images</div>
           {#if open.images}
             <ul>
               <li class="file">blog-starter.jpg</li>
@@ -140,7 +221,7 @@
   <li class="file">vite.config.ts</li>
 
   <li>
-    <div class="folder" on:click={() => toggle('vscode')}>📁 .vscode</div>
+    <div class="folder" on:click={() => toggle('vscode')}>.vscode</div>
     {#if open.vscode}
       <ul>
         <li class="file">settings.json</li>
