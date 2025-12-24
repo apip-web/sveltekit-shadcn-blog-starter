@@ -1,15 +1,3 @@
-<div class="debug">
-Test baru. script ini berfungsi di lokal.
-</div>
-
-<style>
-  .debug {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 8px;
-  }
-</style>
-
 <script>
   function toggle(e) {
     e.stopPropagation();
@@ -22,12 +10,22 @@ Test baru. script ini berfungsi di lokal.
     src
     <ul>
       <li class="folder" on:click={toggle}>
-        components
+        lib
         <ul>
-          <li class="file">Header.svelte</li>
-          <li class="file">Footer.svelte</li>
+          <li class="file">utils.ts</li>
         </ul>
       </li>
     </ul>
   </li>
 </ul>
+
+<style>
+  ul {
+    list-style: none;
+    padding-left: 1rem;
+  }
+  li.folder::before { content: "📁 "; }
+  li.file::before { content: "📄 "; }
+  li > ul { display: none; }
+  li.expanded > ul { display: block; }
+</style>
