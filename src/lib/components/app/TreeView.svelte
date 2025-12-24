@@ -6,3 +6,6 @@ document.querySelectorAll('li.folder').forEach(folder => {
   });
 });
 </script>
+<script>
+    alert('TreeView CLICK OK');
+</script>
