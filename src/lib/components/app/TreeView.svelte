@@ -1,11 +1,3 @@
-<script>
-document.addEventListener('click', (e) => {
-  const folder = e.target.closest('li.folder');
-  if (!folder) return;
-  folder.classList.toggle('expanded');
-});
-</script>
-
 <div class="debug">
 Test baru. script ini berfungsi di lokal.
 </div>
@@ -17,3 +9,14 @@ Test baru. script ini berfungsi di lokal.
     margin-bottom: 8px;
   }
 </style>
+
+<script>
+  let count = 0;
+  function increment() {
+    count += 1;
+  }
+</script>
+
+<button on:click={increment}>
+  Clicks: {count}
+</button>
