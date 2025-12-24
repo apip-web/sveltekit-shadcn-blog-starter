@@ -11,15 +11,23 @@ Test baru. script ini berfungsi di lokal.
 </style>
 
 <script>
-  import { onMount } from 'svelte';
-
-  onMount(() => {
-    console.log('Component has mounted and DOM is ready');
-    // Initialize external JS library here
-    document.addEventListener('click', (e) => {
-  const folder = e.target.closest('li.folder');
-  if (!folder) return;
-  folder.classList.toggle('expanded');
-});
-  });
+  function toggle(e) {
+    e.stopPropagation();
+    e.currentTarget.classList.toggle('expanded');
+  }
 </script>
+
+<ul class="tree-root">
+  <li class="folder" on:click={toggle}>
+    src
+    <ul>
+      <li class="folder" on:click={toggle}>
+        components
+        <ul>
+          <li class="file">Header.svelte</li>
+          <li class="file">Footer.svelte</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
