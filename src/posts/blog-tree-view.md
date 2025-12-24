@@ -26,7 +26,7 @@ li.file::before {
   content: "📄 ";
 }
 li > ul {
-  display: none;
+  /* display: none; */
 }
 li.expanded > ul {
   display: block;
@@ -209,18 +209,4 @@ li.expanded > ul {
 # Blog Tree View
 
 // App.svelte
-<script>
-  import TreeViewHtml from '$lib/components/app/TreeViewHtml.svelte';
-</script>
-
-<TreeViewHtml>
-
-<ul>
-  <li class="folder">src
-    <ul>
-      <li class="file">app.html</li>
-    </ul>
-  </li>
-</ul>
-
-</TreeViewHtml>
+<p>js deleted.</p>
