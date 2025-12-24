@@ -1,6 +1,8 @@
 <script>
-  function toggle(e) {
+document.querySelectorAll('li.folder').forEach(folder => {
+  folder.addEventListener('click', e => {
     e.stopPropagation();
-    e.currentTarget.classList.toggle('expanded');
-  }
+    folder.classList.toggle('expanded');
+  });
+});
 </script>
