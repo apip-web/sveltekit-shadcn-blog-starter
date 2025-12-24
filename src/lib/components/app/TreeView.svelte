@@ -162,8 +162,16 @@
     margin: 4px 0;
   }
 
+  .folder::before {
+    content: "📁 ";
+  }
+
   .file {
     margin: 4px 0 4px 1rem;
     color: #666;
+  }
+
+  .file::before {
+    content: "📄 ";
   }
 </style>
