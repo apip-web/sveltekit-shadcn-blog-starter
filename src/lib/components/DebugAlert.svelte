@@ -4,14 +4,15 @@
   let folderCount = 0;
 
   onMount(() => {
-    const folders = document.querySelectorAll('li.folder');
+    const tree = document.querySelector('.tree-root');
+    const folders = tree.querySelectorAll('li.folder');
     folderCount = folders.length;
 
-    folders.forEach(folder => {
-      folder.addEventListener('click', (e) => {
-        e.stopPropagation();
-        folder.classList.toggle('expanded');
-      });
+    tree.addEventListener('click', (e) => {
+      const folder = e.target.closest('li.folder');
+      if (!folder || !tree.contains(folder)) return;
+
+      folder.classList.toggle('expanded');
     });
   });
 </script>
