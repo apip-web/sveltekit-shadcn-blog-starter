@@ -1,24 +1,13 @@
 <script>
-  import { onMount } from 'svelte';
-
-  let folderCount = 0;
-
-  onMount(() => {
-    const tree = document.querySelector('.tree-root');
-    const folders = tree.querySelectorAll('li.folder');
-    folderCount = folders.length;
-
-    tree.addEventListener('click', (e) => {
-      const folder = e.target.closest('li.folder');
-      if (!folder || !tree.contains(folder)) return;
-
-      folder.classList.toggle('expanded');
-    });
-  });
+document.addEventListener('click', (e) => {
+  const folder = e.target.closest('li.folder');
+  if (!folder) return;
+  folder.classList.toggle('expanded');
+});
 </script>
 
 <div class="debug">
-  📂 Jumlah folder terdeteksi: {folderCount}
+Test baru. script ini berfungsi di lokal.
 </div>
 
 <style>
