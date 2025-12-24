@@ -211,3 +211,9 @@ li.expanded > ul {
 <TreeView />
 
 36 directories, 109 files
+
+<script>
+  import DebugAlert from '$lib/components/DebugAlert.svelte';
+</script>
+
+<DebugAlert />
