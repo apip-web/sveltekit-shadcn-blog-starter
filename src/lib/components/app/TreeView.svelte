@@ -385,38 +385,36 @@
 </ul>
 
 <style>
-  ul {
-    list-style: none;
-    padding-left: 1rem;
-  }
+ul {
+  list-style: none;
+  padding-left: 18px;
+  margin: 0;
+}
 
-  .folder {
-    cursor: pointer;
-    font-weight: 600;
-    user-select: none;
-    margin: 4px 0;
-    position: relative;
-  }
+li {
+  cursor: default;
+  user-select: none;
+  line-height: 1.6;
+}
 
-  .folder::before {
-    content: "▶";
-    display: inline-block;
-    width: 1em;
-    transform: rotate(0deg);
-    transition: transform 0.2s;
-    margin-right: 0.25em;
-  }
+li.folder {
+  cursor: pointer;
+}
 
-  .folder.open::before {
-    transform: rotate(90deg);
-  }
+li.folder::before {
+  content: "📁 ";
+}
 
-  .file {
-    margin: 4px 0 4px 1.5em;
-    color: #666;
-  }
+li.file::before {
+  content: "📄 ";
+  opacity: 0.7;
+}
 
-  ul ul {
-    padding-left: 1em;
-  }
+li > ul {
+  display: none;
+}
+
+li.expanded > ul {
+  display: block;
+}
 </style>
