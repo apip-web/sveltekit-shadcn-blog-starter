@@ -386,10 +386,6 @@ li.file::before {
   opacity: 0.7;
 }
 
-li > ul {
-  display: none;
-}
-
 li.expanded > ul {
   display: block;
 }
