@@ -1,7 +1,8 @@
 <script>
-  function toggle(e) {
-    const li = e.currentTarget.parentElement;
-    li.classList.toggle('expanded');
+  let open = {};
+
+  function toggle(key) {
+    open[key] = !open[key];
   }
 </script>
 
