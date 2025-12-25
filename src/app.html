@@ -13,21 +13,6 @@
 		}
 	</style>
 
-<script>
-function initTreeView() {
-  const tree = document.querySelector('.tree-root');
-  if (!tree) return setTimeout(initTreeView, 100); // Cek lagi dalam 100ms
-
-  tree.addEventListener('click', (e) => {
-    const folder = e.target.closest('li.folder');
-    if (!folder) return;
-    folder.classList.toggle('expanded');
-  });
-}
-
-initTreeView();
-</script>
-
 </head>
 
 <body data-sveltekit-preload-data="hover">
