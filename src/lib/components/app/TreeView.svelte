@@ -6,7 +6,7 @@
   }
 </script>
 
-<ul>
+<ul class="tree">
   <li class="file">components.json</li>
   <li class="file">CONTRIBUTING.md</li>
   <li class="file">.env.example</li>
@@ -19,20 +19,21 @@
   <li class="file">README.md</li>
 
   <!-- src -->
-  <li class="folder" on:click={() => toggle('src')} class:expanded={open.src}>
-    src
+  <li>
+    <div class="folder" on:click={() => toggle('src')}>src</div>
     {#if open.src}
       <ul>
         <li class="file">app.d.ts</li>
         <li class="file">app.html</li>
 
         <!-- lib -->
-        <li class="folder" on:click={() => toggle('lib')} class:expanded={open.lib}>
-          lib
+        <li>
+          <div class="folder" on:click={() => toggle('lib')}>lib</div>
           {#if open.lib}
             <ul>
-              <li class="folder" on:click={() => toggle('assets')} class:expanded={open.assets}>
-                assets
+              <!-- assets -->
+              <li>
+                <div class="folder" on:click={() => toggle('assets')}>assets</div>
                 {#if open.assets}
                   <ul>
                     <li class="file">favicon.svg</li>
@@ -40,12 +41,14 @@
                 {/if}
               </li>
 
-              <li class="folder" on:click={() => toggle('components')} class:expanded={open.components}>
-                components
+              <!-- components -->
+              <li>
+                <div class="folder" on:click={() => toggle('components')}>components</div>
                 {#if open.components}
                   <ul>
-                    <li class="folder" on:click={() => toggle('app')} class:expanded={open.app}>
-                      app
+                    <!-- app -->
+                    <li>
+                      <div class="folder" on:click={() => toggle('app')}>app</div>
                       {#if open.app}
                         <ul>
                           <li class="file">DesktopNav.svelte</li>
@@ -58,8 +61,9 @@
                       {/if}
                     </li>
 
-                    <li class="folder" on:click={() => toggle('blog')} class:expanded={open.blog}>
-                      blog
+                    <!-- blog -->
+                    <li>
+                      <div class="folder" on:click={() => toggle('blog')}>blog</div>
                       {#if open.blog}
                         <ul>
                           <li class="file">PostCard.svelte</li>
@@ -67,12 +71,13 @@
                       {/if}
                     </li>
 
-                    <li class="folder" on:click={() => toggle('ui')} class:expanded={open.ui}>
-                      ui
+                    <!-- ui -->
+                    <li>
+                      <div class="folder" on:click={() => toggle('ui')}>ui</div>
                       {#if open.ui}
                         <ul>
-                          <li class="folder" on:click={() => toggle('badge')} class:expanded={open.badge}>
-                            badge
+                          <li>
+                            <div class="folder" on:click={() => toggle('badge')}>badge</div>
                             {#if open.badge}
                               <ul>
                                 <li class="file">badge.svelte</li>
@@ -80,8 +85,8 @@
                               </ul>
                             {/if}
                           </li>
-                          <li class="folder" on:click={() => toggle('button')} class:expanded={open.button}>
-                            button
+                          <li>
+                            <div class="folder" on:click={() => toggle('button')}>button</div>
                             {#if open.button}
                               <ul>
                                 <li class="file">button.svelte</li>
@@ -89,8 +94,8 @@
                               </ul>
                             {/if}
                           </li>
-                          <li class="folder" on:click={() => toggle('command')} class:expanded={open.command}>
-                            command
+                          <li>
+                            <div class="folder" on:click={() => toggle('command')}>command</div>
                             {#if open.command}
                               <ul>
                                 <li class="file">command-dialog.svelte</li>
@@ -108,8 +113,9 @@
                               </ul>
                             {/if}
                           </li>
-                          <li class="folder" on:click={() => toggle('dialog')} class:expanded={open.dialog}>
-                            dialog
+
+                          <li>
+                            <div class="folder" on:click={() => toggle('dialog')}>dialog</div>
                             {#if open.dialog}
                               <ul>
                                 <li class="file">dialog-close.svelte</li>
@@ -126,8 +132,9 @@
                               </ul>
                             {/if}
                           </li>
-                          <li class="folder" on:click={() => toggle('input')} class:expanded={open.input}>
-                            input
+
+                          <li>
+                            <div class="folder" on:click={() => toggle('input')}>input</div>
                             {#if open.input}
                               <ul>
                                 <li class="file">index.ts</li>
@@ -135,8 +142,9 @@
                               </ul>
                             {/if}
                           </li>
-                          <li class="folder" on:click={() => toggle('input-group')} class:expanded={open['input-group']}>
-                            input-group
+
+                          <li>
+                            <div class="folder" on:click={() => toggle('input-group')}>input-group</div>
                             {#if open['input-group']}
                               <ul>
                                 <li class="file">index.ts</li>
@@ -149,8 +157,9 @@
                               </ul>
                             {/if}
                           </li>
-                          <li class="folder" on:click={() => toggle('navigation-menu')} class:expanded={open['navigation-menu']}>
-                            navigation-menu
+
+                          <li>
+                            <div class="folder" on:click={() => toggle('navigation-menu')}>navigation-menu</div>
                             {#if open['navigation-menu']}
                               <ul>
                                 <li class="file">index.ts</li>
@@ -165,8 +174,9 @@
                               </ul>
                             {/if}
                           </li>
-                          <li class="folder" on:click={() => toggle('separator')} class:expanded={open.separator}>
-                            separator
+
+                          <li>
+                            <div class="folder" on:click={() => toggle('separator')}>separator</div>
                             {#if open.separator}
                               <ul>
                                 <li class="file">index.ts</li>
@@ -174,8 +184,9 @@
                               </ul>
                             {/if}
                           </li>
-                          <li class="folder" on:click={() => toggle('sheet')} class:expanded={open.sheet}>
-                            sheet
+
+                          <li>
+                            <div class="folder" on:click={() => toggle('sheet')}>sheet</div>
                             {#if open.sheet}
                               <ul>
                                 <li class="file">index.ts</li>
@@ -192,8 +203,9 @@
                               </ul>
                             {/if}
                           </li>
-                          <li class="folder" on:click={() => toggle('textarea')} class:expanded={open.textarea}>
-                            textarea
+
+                          <li>
+                            <div class="folder" on:click={() => toggle('textarea')}>textarea</div>
                             {#if open.textarea}
                               <ul>
                                 <li class="file">index.ts</li>
@@ -209,8 +221,8 @@
               </li>
 
               <!-- config -->
-              <li class="folder" on:click={() => toggle('config')} class:expanded={open.config}>
-                config
+              <li>
+                <div class="folder" on:click={() => toggle('config')}>config</div>
                 {#if open.config}
                   <ul>
                     <li class="file">authors.ts</li>
@@ -226,8 +238,8 @@
         </li>
 
         <!-- posts -->
-        <li class="folder" on:click={() => toggle('posts')} class:expanded={open.posts}>
-          posts
+        <li>
+          <div class="folder" on:click={() => toggle('posts')}>posts</div>
           {#if open.posts}
             <ul>
               <li class="file">hello-world.md</li>
@@ -238,12 +250,12 @@
         </li>
 
         <!-- routes -->
-        <li class="folder" on:click={() => toggle('routes')} class:expanded={open.routes}>
-          routes
+        <li>
+          <div class="folder" on:click={() => toggle('routes')}>routes</div>
           {#if open.routes}
             <ul>
-              <li class="folder" on:click={() => toggle('about')} class:expanded={open.about}>
-                about
+              <li>
+                <div class="folder" on:click={() => toggle('about')}>about</div>
                 {#if open.about}
                   <ul>
                     <li class="file">+page.svelte</li>
@@ -251,12 +263,12 @@
                 {/if}
               </li>
 
-              <li class="folder" on:click={() => toggle('api')} class:expanded={open.api}>
-                api
+              <li>
+                <div class="folder" on:click={() => toggle('api')}>api</div>
                 {#if open.api}
                   <ul>
-                    <li class="folder" on:click={() => toggle('search')} class:expanded={open.search}>
-                      search
+                    <li>
+                      <div class="folder" on:click={() => toggle('search')}>search</div>
                       {#if open.search}
                         <ul>
                           <li class="file">+server.ts</li>
@@ -267,12 +279,12 @@
                 {/if}
               </li>
 
-              <li class="folder" on:click={() => toggle('authors')} class:expanded={open.authors}>
-                authors
+              <li>
+                <div class="folder" on:click={() => toggle('authors')}>authors</div>
                 {#if open.authors}
                   <ul>
-                    <li class="folder" on:click={() => toggle('author')} class:expanded={open.author}>
-                      [author]
+                    <li>
+                      <div class="folder" on:click={() => toggle('author')}>[author]</div>
                       {#if open.author}
                         <ul>
                           <li class="file">+page.svelte</li>
@@ -284,14 +296,14 @@
                 {/if}
               </li>
 
-              <li class="folder" on:click={() => toggle('blog-routes')} class:expanded={open['blog-routes']}>
-                blog
+              <li>
+                <div class="folder" on:click={() => toggle('blog-routes')}>blog</div>
                 {#if open['blog-routes']}
                   <ul>
                     <li class="file">+page.svelte</li>
                     <li class="file">+page.ts</li>
-                    <li class="folder" on:click={() => toggle('slug')} class:expanded={open.slug}>
-                      [slug]
+                    <li>
+                      <div class="folder" on:click={() => toggle('slug')}>[slug]</div>
                       {#if open.slug}
                         <ul>
                           <li class="file">+page.svelte</li>
@@ -318,12 +330,12 @@
   </li>
 
   <!-- static -->
-  <li class="folder" on:click={() => toggle('static')} class:expanded={open.static}>
-    static
+  <li>
+    <div class="folder" on:click={() => toggle('static')}>static</div>
     {#if open.static}
       <ul>
-        <li class="folder" on:click={() => toggle('images')} class:expanded={open.images}>
-          images
+        <li>
+          <div class="folder" on:click={() => toggle('images')}>images</div>
           {#if open.images}
             <ul>
               <li class="file">blog-starter.jpg</li>
@@ -338,8 +350,8 @@
   <li class="file">tsconfig.json</li>
   <li class="file">vite.config.ts</li>
 
-  <li class="folder" on:click={() => toggle('vscode')} class:expanded={open.vscode}>
-    .vscode
+  <li>
+    <div class="folder" on:click={() => toggle('vscode')}>.vscode</div>
     {#if open.vscode}
       <ul>
         <li class="file">settings.json</li>
@@ -351,34 +363,36 @@
 <style>
   ul {
     list-style: none;
-    padding-left: 18px;
-    margin: 0;
+    padding-left: 1rem;
   }
 
-  li {
-    cursor: default;
-    user-select: none;
-    line-height: 1.6;
-  }
-
-  li.folder {
+  .folder {
     cursor: pointer;
+    font-weight: 600;
+    user-select: none;
+    margin: 4px 0;
+    position: relative;
   }
 
-  li.folder::before {
-    content: "📁 ";
+  .folder::before {
+    content: "▶";
+    display: inline-block;
+    width: 1em;
+    transform: rotate(0deg);
+    transition: transform 0.2s;
+    margin-right: 0.25em;
   }
 
-  li.file::before {
-    content: "📄 ";
-    opacity: 0.7;
+  .folder.open::before {
+    transform: rotate(90deg);
   }
 
-  li > ul {
-    display: none;
+  .file {
+    margin: 4px 0 4px 1.5em;
+    color: #666;
   }
 
-  li.expanded > ul {
-    display: block;
+  ul ul {
+    padding-left: 1em;
   }
 </style>
