@@ -16,7 +16,13 @@
 
 <body data-sveltekit-preload-data="hover">
 	<div style="display: contents">%sveltekit.body%</div>
-<div>elemen komentar</div>
+<script>
+document.addEventListener('click', (e) => {
+  const folder = e.target.closest('li.folder');
+  if (!folder) return;
+  folder.classList.toggle('expanded');
+});
+</script>
 </body>
 
 </html>
