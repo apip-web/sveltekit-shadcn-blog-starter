@@ -377,7 +377,7 @@ li.folder {
   cursor: pointer;
 }
 
-li.folder::before {
+.folder::before {
   content: "📁 ";
 }
 
