@@ -7,6 +7,7 @@
 </script>
 
 <ul class="tree">
+  <!-- root files -->
   <li class="file">components.json</li>
   <li class="file">CONTRIBUTING.md</li>
   <li class="file">.env.example</li>
@@ -76,6 +77,7 @@
                       <div class="folder" on:click={() => toggle('ui')}>ui</div>
                       {#if open.ui}
                         <ul>
+                          <!-- badge -->
                           <li>
                             <div class="folder" on:click={() => toggle('badge')}>badge</div>
                             {#if open.badge}
@@ -85,6 +87,7 @@
                               </ul>
                             {/if}
                           </li>
+                          <!-- button -->
                           <li>
                             <div class="folder" on:click={() => toggle('button')}>button</div>
                             {#if open.button}
@@ -94,6 +97,7 @@
                               </ul>
                             {/if}
                           </li>
+                          <!-- command -->
                           <li>
                             <div class="folder" on:click={() => toggle('command')}>command</div>
                             {#if open.command}
@@ -113,7 +117,7 @@
                               </ul>
                             {/if}
                           </li>
-
+                          <!-- dialog -->
                           <li>
                             <div class="folder" on:click={() => toggle('dialog')}>dialog</div>
                             {#if open.dialog}
@@ -132,7 +136,7 @@
                               </ul>
                             {/if}
                           </li>
-
+                          <!-- input -->
                           <li>
                             <div class="folder" on:click={() => toggle('input')}>input</div>
                             {#if open.input}
@@ -142,7 +146,7 @@
                               </ul>
                             {/if}
                           </li>
-
+                          <!-- input-group -->
                           <li>
                             <div class="folder" on:click={() => toggle('input-group')}>input-group</div>
                             {#if open['input-group']}
@@ -157,7 +161,7 @@
                               </ul>
                             {/if}
                           </li>
-
+                          <!-- navigation-menu -->
                           <li>
                             <div class="folder" on:click={() => toggle('navigation-menu')}>navigation-menu</div>
                             {#if open['navigation-menu']}
@@ -174,7 +178,7 @@
                               </ul>
                             {/if}
                           </li>
-
+                          <!-- separator -->
                           <li>
                             <div class="folder" on:click={() => toggle('separator')}>separator</div>
                             {#if open.separator}
@@ -184,7 +188,7 @@
                               </ul>
                             {/if}
                           </li>
-
+                          <!-- sheet -->
                           <li>
                             <div class="folder" on:click={() => toggle('sheet')}>sheet</div>
                             {#if open.sheet}
@@ -203,7 +207,7 @@
                               </ul>
                             {/if}
                           </li>
-
+                          <!-- textarea -->
                           <li>
                             <div class="folder" on:click={() => toggle('textarea')}>textarea</div>
                             {#if open.textarea}
@@ -262,7 +266,6 @@
                   </ul>
                 {/if}
               </li>
-
               <li>
                 <div class="folder" on:click={() => toggle('api')}>api</div>
                 {#if open.api}
@@ -278,7 +281,6 @@
                   </ul>
                 {/if}
               </li>
-
               <li>
                 <div class="folder" on:click={() => toggle('authors')}>authors</div>
                 {#if open.authors}
@@ -295,7 +297,6 @@
                   </ul>
                 {/if}
               </li>
-
               <li>
                 <div class="folder" on:click={() => toggle('blog-routes')}>blog</div>
                 {#if open['blog-routes']}
@@ -315,13 +316,36 @@
                 {/if}
               </li>
 
+              <!-- server files as folders -->
+              <li>
+                <div class="folder" on:click={() => toggle('robots')}>robots.txt</div>
+                {#if open.robots}
+                  <ul>
+                    <li class="file">+server.ts</li>
+                  </ul>
+                {/if}
+              </li>
+              <li>
+                <div class="folder" on:click={() => toggle('rss')}>rss.xml</div>
+                {#if open.rss}
+                  <ul>
+                    <li class="file">+server.ts</li>
+                  </ul>
+                {/if}
+              </li>
+              <li>
+                <div class="folder" on:click={() => toggle('sitemap')}>sitemap.xml</div>
+                {#if open.sitemap}
+                  <ul>
+                    <li class="file">+server.ts</li>
+                  </ul>
+                {/if}
+              </li>
+
               <li class="file">+error.svelte</li>
               <li class="file">layout.css</li>
               <li class="file">+layout.svelte</li>
               <li class="file">+page.svelte</li>
-              <li class="file">robots.txt</li>
-              <li class="file">rss.xml</li>
-              <li class="file">sitemap.xml</li>
             </ul>
           {/if}
         </li>
